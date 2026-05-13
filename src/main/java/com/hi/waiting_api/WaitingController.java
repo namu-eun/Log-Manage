@@ -19,6 +19,7 @@ public class WaitingController {
         String phone = waitingRequest.getPhone();
 
         try {
+            log.info("[api 호출] 웨이팅 등록 요청 들어옴");
             return waitingService.registerWaiting(name, phone);
         } catch (IllegalArgumentException e) {
             log.error("[api 오류] 웨이팅 등록 중 문제 발생 : {}", e.getMessage());
