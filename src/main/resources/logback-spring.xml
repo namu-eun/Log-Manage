@@ -24,10 +24,11 @@
         </encoder>
 
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>${LOG_DIR}/${LOG_FILE_NAME}-%d{yyyy-MM-dd}.log</fileNamePattern>
-<!--            <maxHistory>30</maxHistory> -->
+            <fileNamePattern>${LOG_DIR}/${LOG_FILE_NAME}-%d{yyyy-MM-dd}.log.gz</fileNamePattern>
+<!--            <fileNamePattern>${LOG_DIR}/${LOG_FILE_NAME}-%d{yyyy-MM-dd_HH-mm}.log</fileNamePattern>-->
+
             <!--  로그를 최대 30일치만 남기고 31일째 로그부터는 알아서 지워줘!-->
-            <fileNamePattern>${LOG_DIR}/${LOG_FILE_NAME}-%d{yyyy-MM-dd_HH-mm}.log</fileNamePattern>
+            <!--            <maxHistory>30</maxHistory> -->
             <maxHistory>3</maxHistory>
         </rollingPolicy>
     </appender>
